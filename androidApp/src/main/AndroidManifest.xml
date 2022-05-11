@@ -3,6 +3,7 @@
     package="com.viktorrusu.kmmmovies.android">
 
     <application
+        android:name=".MoviesApp"
         android:allowBackup="false"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">

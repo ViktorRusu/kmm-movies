@@ -26,6 +26,7 @@ kotlin {
         val commonMain by getting {
 			dependencies {
 				implementation(Dependencies.Koin.core)
+				implementation(Dependencies.Ktor.core)
 				implementation(Dependencies.Coroutines.common)
 			}
 		}
@@ -34,7 +35,11 @@ kotlin {
                 implementation(kotlin("test"))
             }
         }
-        val androidMain by getting
+        val androidMain by getting {
+        	dependencies {
+        		implementation(Dependencies.Ktor.android)
+			}
+		}
         val androidTest by getting
         val iosX64Main by getting
         val iosArm64Main by getting
@@ -44,6 +49,9 @@ kotlin {
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
+			dependencies {
+				implementation(Dependencies.Ktor.ios)
+			}
         }
         val iosX64Test by getting
         val iosArm64Test by getting

@@ -4,6 +4,7 @@ object Versions {
 	const val compose = "1.1.1"
 	const val composeActivity = "1.4.0"
 	const val composeNavigation = "2.4.1"
+	const val ktor = "2.0.1"
 }
 
 object Dependencies {
@@ -26,5 +27,11 @@ object Dependencies {
 	object Coroutines {
 		const val common = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
 		const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+	}
+
+	object Ktor {
+		const val core = "io.ktor:ktor-client-core:${Versions.ktor}"
+		const val android = "io.ktor:ktor-client-okhttp:${Versions.ktor}"
+		const val ios = "io.ktor:ktor-client-darwin:${Versions.ktor}"
 	}
 }

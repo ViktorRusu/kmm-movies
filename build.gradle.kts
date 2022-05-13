@@ -1,4 +1,5 @@
 plugins {
+    id(Plugins.gitHooks)
     id(Plugins.detekt) version PluginsVersions.detekt
     id(Plugins.ktlint) version PluginsVersions.ktlint
 }

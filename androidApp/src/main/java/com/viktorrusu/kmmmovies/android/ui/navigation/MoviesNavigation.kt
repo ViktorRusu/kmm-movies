@@ -10,31 +10,31 @@ import com.viktorrusu.kmmmovies.android.ui.screens.splash.SplashScreen
 
 @Composable
 fun MoviesNavigation() {
-	val navController = rememberNavController()
+    val navController = rememberNavController()
 
-	NavHost(
-		navController = navController,
-		startDestination = MoviesRoute.Splash.route
-	) {
-		composable(MoviesRoute.Splash.route) {
-			SplashScreen {
-				navController.popBackStack()
-				navController.navigate(MoviesRoute.Home.route)
-			}
-		}
+    NavHost(
+        navController = navController,
+        startDestination = MoviesRoute.Splash.route
+    ) {
+        composable(MoviesRoute.Splash.route) {
+            SplashScreen {
+                navController.popBackStack()
+                navController.navigate(MoviesRoute.Home.route)
+            }
+        }
 
-		composable(MoviesRoute.Home.route) {
-			HomeScreen()
-		}
+        composable(MoviesRoute.Home.route) {
+            HomeScreen()
+        }
 
-		composable(MoviesRoute.Details.route) {
-			DetailsScreen()
-		}
-	}
+        composable(MoviesRoute.Details.route) {
+            DetailsScreen()
+        }
+    }
 }
 
 sealed class MoviesRoute(val route: String) {
-	object Splash : MoviesRoute("Splash")
-	object Home : MoviesRoute("Home")
-	object Details : MoviesRoute("Details")
+    object Splash : MoviesRoute("Splash")
+    object Home : MoviesRoute("Home")
+    object Details : MoviesRoute("Details")
 }

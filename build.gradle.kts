@@ -1,3 +1,8 @@
+plugins {
+    id(Plugins.detekt) version PluginsVersions.detekt
+    id(Plugins.ktlint) version PluginsVersions.ktlint
+}
+
 buildscript {
     repositories {
         gradlePluginPortal()
@@ -14,6 +19,35 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+    }
+
+    apply {
+        plugin(Plugins.detekt)
+        plugin(Plugins.ktlint)
+    }
+
+    detekt {
+        config = rootProject.files("$rootDir/.detekt/config.yml")
+    }
+
+    tasks.withType<io.gitlab.arturbosch.detekt.Detekt>().configureEach {
+        reports.html.required.set(true)
+        reports.txt.required.set(false)
+        reports.sarif.required.set(false)
+    }
+
+    ktlint {
+        debug.set(false)
+        version.set(Versions.ktlint)
+        verbose.set(true)
+        android.set(false)
+        outputToConsole.set(true)
+        ignoreFailures.set(false)
+        enableExperimentalRules.set(true)
+        filter {
+            exclude("**/generated/**")
+            include("**/kotlin/**")
+        }
     }
 }
 

@@ -9,10 +9,10 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun DetailsScreen() {
-	Box(
-		modifier = Modifier.fillMaxSize(),
-		contentAlignment = Alignment.Center
-	) {
-		Text(text = "Details")
-	}
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(text = "Details")
+    }
 }

@@ -8,16 +8,16 @@ import org.koin.android.ext.koin.androidLogger
 
 class MoviesApp : Application() {
 
-	override fun onCreate() {
-		super.onCreate()
-		setupKoin()
-	}
+    override fun onCreate() {
+        super.onCreate()
+        setupKoin()
+    }
 
-	private fun setupKoin() {
-		initKoin {
-			androidLogger()
-			androidContext(this@MoviesApp)
-			modules(appModule)
-		}
-	}
+    private fun setupKoin() {
+        initKoin {
+            androidLogger()
+            androidContext(this@MoviesApp)
+            modules(appModule)
+        }
+    }
 }

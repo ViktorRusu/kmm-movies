@@ -10,22 +10,22 @@ import androidx.compose.ui.unit.sp
 import com.viktorrusu.kmmmovies.android.R
 
 private val LatoFontFamily = FontFamily(
-	Font(R.font.lato_regular),
-	Font(R.font.lato_bold, FontWeight.Bold)
+    Font(R.font.lato_regular),
+    Font(R.font.lato_bold, FontWeight.Bold)
 )
 
 @Immutable
 data class MoviesTypography(
-	val body: TextStyle
+    val body: TextStyle
 ) {
-	companion object {
-		@Composable
-		fun defaultTypography(fontFamily: FontFamily? = LatoFontFamily): MoviesTypography = MoviesTypography(
-			body = TextStyle(
-				fontSize = 14.sp,
-				fontFamily = fontFamily,
-				fontWeight = FontWeight.W400
-			)
-		)
-	}
+    companion object {
+        @Composable
+        fun defaultTypography(fontFamily: FontFamily? = LatoFontFamily): MoviesTypography = MoviesTypography(
+            body = TextStyle(
+                fontSize = 14.sp,
+                fontFamily = fontFamily,
+                fontWeight = FontWeight.W400
+            )
+        )
+    }
 }

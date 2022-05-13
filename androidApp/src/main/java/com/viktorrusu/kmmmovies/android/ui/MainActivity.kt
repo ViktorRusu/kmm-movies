@@ -16,35 +16,35 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-		setContent {
-			MainContent()
-		}
+        setContent {
+            MainContent()
+        }
     }
 
-	@Composable
-	fun MainContent() {
-		MoviesTheme {
-			Surface(
-				modifier = Modifier.fillMaxSize(),
-				color = MoviesTheme.colors.background
-			) {
-				SetStatusBarColor()
-				MoviesNavigation()
-			}
-		}
-	}
+    @Composable
+    fun MainContent() {
+        MoviesTheme {
+            Surface(
+                modifier = Modifier.fillMaxSize(),
+                color = MoviesTheme.colors.background
+            ) {
+                SetStatusBarColor()
+                MoviesNavigation()
+            }
+        }
+    }
 }
 
 @Composable
 fun SetStatusBarColor() {
-	val systemUiController = rememberSystemUiController()
+    val systemUiController = rememberSystemUiController()
 
-	val statusBarColor = MoviesTheme.colors.background
+    val statusBarColor = MoviesTheme.colors.background
 
-	SideEffect {
-		systemUiController.setStatusBarColor(
-			color = statusBarColor,
-			darkIcons = false
-		)
-	}
+    SideEffect {
+        systemUiController.setStatusBarColor(
+            color = statusBarColor,
+            darkIcons = false
+        )
+    }
 }

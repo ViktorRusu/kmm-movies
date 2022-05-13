@@ -6,15 +6,14 @@ import androidx.compose.runtime.Immutable
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.dp
 
-
 @Immutable
 data class MoviesShapes(
-	val inputField: Shape
+    val inputField: Shape
 ) {
-	companion object {
-		@Composable
-		fun defaultShapes(): MoviesShapes = MoviesShapes(
-			inputField = RoundedCornerShape(8.dp)
-		)
-	}
+    companion object {
+        @Composable
+        fun defaultShapes(): MoviesShapes = MoviesShapes(
+            inputField = RoundedCornerShape(8.dp)
+        )
+    }
 }

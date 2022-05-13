@@ -7,10 +7,10 @@ import org.koin.dsl.KoinAppDeclaration
 expect val platformModule: Module
 
 fun initKoin(appDeclaration: KoinAppDeclaration = {}) = startKoin {
-	modules(
-		platformModule
-	)
-	appDeclaration()
+    modules(
+        platformModule
+    )
+    appDeclaration()
 }
 
-fun initKoin() = initKoin {  }
+fun initKoin() = initKoin { }

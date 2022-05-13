@@ -12,15 +12,15 @@ import kotlinx.coroutines.delay
 
 @Composable
 fun SplashScreen(navigateHome: () -> Unit) {
-	LaunchedEffect(key1 = true) {
-		delay(timeMillis = 2500L)
-		navigateHome()
-	}
+    LaunchedEffect(key1 = true) {
+        delay(timeMillis = 2500L)
+        navigateHome()
+    }
 
-	Box(
-		modifier = Modifier.fillMaxSize(),
-		contentAlignment = Alignment.Center
-	) {
-		Text(text = "Splash", color = Color.White)
-	}
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(text = "Splash", color = Color.White)
+    }
 }

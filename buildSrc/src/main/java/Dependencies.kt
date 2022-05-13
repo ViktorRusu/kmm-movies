@@ -6,6 +6,7 @@ object Versions {
 	const val composeNavigation = "2.4.1"
 	const val accompanist = "0.23.1"
 	const val ktor = "2.0.1"
+	const val ktlint = "0.43.2"
 }
 
 object Dependencies {

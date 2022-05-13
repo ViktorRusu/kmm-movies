@@ -19,17 +19,17 @@ android {
         }
     }
 
-	kotlinOptions {
-		jvmTarget = "1.8"
-	}
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 
-	buildFeatures {
-		compose = true
-	}
+    buildFeatures {
+        compose = true
+    }
 
-	composeOptions {
-		kotlinCompilerExtensionVersion = "1.2.0-beta01"
-	}
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.2.0-beta01"
+    }
 }
 
 dependencies {
@@ -37,15 +37,15 @@ dependencies {
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.appcompat:appcompat:1.3.1")
 
-	implementation(Dependencies.AndroidX.Compose.ui)
-	implementation(Dependencies.AndroidX.Compose.material)
-	implementation(Dependencies.AndroidX.Compose.activity)
-	implementation(Dependencies.AndroidX.Compose.navigation)
-	implementation(Dependencies.AndroidX.Compose.tooling)
-	debugImplementation(Dependencies.AndroidX.Compose.toolingPreview)
+    implementation(Dependencies.AndroidX.Compose.ui)
+    implementation(Dependencies.AndroidX.Compose.material)
+    implementation(Dependencies.AndroidX.Compose.activity)
+    implementation(Dependencies.AndroidX.Compose.navigation)
+    implementation(Dependencies.AndroidX.Compose.tooling)
+    debugImplementation(Dependencies.AndroidX.Compose.toolingPreview)
 
-	implementation(Dependencies.AndroidX.Accompanist.systemUiController)
+    implementation(Dependencies.AndroidX.Accompanist.systemUiController)
 
-	implementation(Dependencies.Koin.android)
-	implementation(Dependencies.Coroutines.android)
+    implementation(Dependencies.Koin.android)
+    implementation(Dependencies.Coroutines.android)
 }

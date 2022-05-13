@@ -12,12 +12,12 @@ import com.viktorrusu.kmmmovies.android.ui.theme.MoviesTheme
 
 @Composable
 fun FavoritesScreen() {
-	Box(
-		modifier = Modifier
-			.fillMaxSize()
-			.background(MoviesTheme.colors.background),
-		contentAlignment = Alignment.Center
-	) {
-		Text(text = "Favorites", color = Color.White)
-	}
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(MoviesTheme.colors.background),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(text = "Favorites", color = Color.White)
+    }
 }

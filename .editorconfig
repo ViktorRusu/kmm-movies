@@ -2,11 +2,13 @@
 root = true
 
 [*]
-insert_final_newline = false
+insert_final_newline = true
 
 [*.{yml, json}]
 indent_style = space
 indent_size = 2
 
 [*.{kt, kts, java}]
-indent_style = tab
+indent_size = 4
+
+disabled_rules=no-wildcard-imports

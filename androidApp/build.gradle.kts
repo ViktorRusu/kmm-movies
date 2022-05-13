@@ -44,6 +44,8 @@ dependencies {
 	implementation(Dependencies.AndroidX.Compose.tooling)
 	debugImplementation(Dependencies.AndroidX.Compose.toolingPreview)
 
+	implementation(Dependencies.AndroidX.Accompanist.systemUiController)
+
 	implementation(Dependencies.Koin.android)
 	implementation(Dependencies.Coroutines.android)
 }

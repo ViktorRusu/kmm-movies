@@ -1,16 +1,16 @@
 package com.viktorrusu.kmmmovies.android.ui
 
 import android.os.Bundle
-import com.viktorrusu.kmmmovies.Greeting
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.viktorrusu.kmmmovies.android.ui.navigation.MoviesNavigation
 import com.viktorrusu.kmmmovies.android.ui.theme.MoviesTheme
-
 
 class MainActivity : ComponentActivity() {
 
@@ -25,10 +25,26 @@ class MainActivity : ComponentActivity() {
 	fun MainContent() {
 		MoviesTheme {
 			Surface(
-				modifier = Modifier.fillMaxSize()
+				modifier = Modifier.fillMaxSize(),
+				color = MoviesTheme.colors.background
 			) {
-				Text(text = Greeting().greeting())
+				SetStatusBarColor()
+				MoviesNavigation()
 			}
 		}
+	}
+}
+
+@Composable
+fun SetStatusBarColor() {
+	val systemUiController = rememberSystemUiController()
+
+	val statusBarColor = MoviesTheme.colors.background
+
+	SideEffect {
+		systemUiController.setStatusBarColor(
+			color = statusBarColor,
+			darkIcons = false
+		)
 	}
 }

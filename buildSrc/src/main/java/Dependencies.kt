@@ -4,6 +4,7 @@ object Versions {
 	const val compose = "1.1.1"
 	const val composeActivity = "1.4.0"
 	const val composeNavigation = "2.4.1"
+	const val accompanist = "0.23.1"
 	const val ktor = "2.0.1"
 }
 
@@ -16,6 +17,10 @@ object Dependencies {
 			const val tooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
 			const val toolingPreview = "androidx.compose.ui:ui-tooling-preview:${Versions.compose}"
 			const val navigation = "androidx.navigation:navigation-compose:${Versions.composeNavigation}"
+		}
+
+		object Accompanist {
+			const val systemUiController = "com.google.accompanist:accompanist-systemuicontroller:${Versions.accompanist}"
 		}
 	}
 

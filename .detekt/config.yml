@@ -82,6 +82,7 @@ complexity:
     functionThreshold: 6
     constructorThreshold: 6
     ignoreDefaultParameters: false
+    ignoreAnnotated: ['Composable']
   MethodOverloading:
     active: false
     threshold: 6

@@ -16,11 +16,17 @@ private val LatoFontFamily = FontFamily(
 
 @Immutable
 data class MoviesTypography(
+    val title1: TextStyle,
     val body: TextStyle
 ) {
     companion object {
         @Composable
         fun defaultTypography(fontFamily: FontFamily? = LatoFontFamily): MoviesTypography = MoviesTypography(
+            title1 = TextStyle(
+                fontSize = 28.sp,
+                fontFamily = fontFamily,
+                fontWeight = FontWeight.Bold
+            ),
             body = TextStyle(
                 fontSize = 14.sp,
                 fontFamily = fontFamily,

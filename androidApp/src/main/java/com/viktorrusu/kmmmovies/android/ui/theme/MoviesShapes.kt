@@ -13,7 +13,7 @@ data class MoviesShapes(
     companion object {
         @Composable
         fun defaultShapes(): MoviesShapes = MoviesShapes(
-            inputField = RoundedCornerShape(8.dp)
+            inputField = RoundedCornerShape(24.dp)
         )
     }
 }
